@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore exciting travel packages with Cavite Tigers Travel and Tours. Your adventure starts here!">
+    <meta name="keywords" content="Cavite travel, tours, travel packages, destinations, adventure">
+    <title>Cavite Tiger Travel and Tours.com</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Readability Enhancements */
+        body {
+            font-size: 18px; /* Larger font size for readability */
+            line-height: 1.6; /* Better line spacing */
+            background-color: #f9f9f9; /* Light background for contrast */
+        }
+
+        h2 {
+            font-size: 2.5em; /* Increase heading size */
+            text-align: center;
+            margin: 30px 0; /* Spacing around the heading */
+            color: #ff6f61; /* Heading color */
+        }
+
+        p {
+            font-size: 1.1em; /* Larger paragraph text */
+            padding: 10px 0;
+        }
+
+        nav ul li a {
+            font-size: 1.2em; /* Larger navigation text */
+        }
+
+        .section-padding {
+            padding: 50px 20px; /* Padding for section */
+        }
+
+        .package-grid {
+            display: flex;
+            flex-wrap: wrap; /* Allow cards to wrap */
+            justify-content: center; /* Center align cards */
+        }
+
+        .package-card {
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            border-radius: 8px; /* Rounded corners for cards */
+            transition: transform 0.3s; /* Smooth transition */
+            background-color: white; /* White background for cards */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+            max-width: 300px; /* Max width for cards */
+        }
+
+        .package-card img {
+            max-width: 100%;
+            border-radius: 8px 8px 0 0; /* Rounded corners for images */
+        }
+
+        .package-card:hover {
+            transform: scale(1.05); /* Slightly scale on hover */
+        }
+
+        button {
+            font-size: 1.2em; /* Larger button text */
+            padding: 10px 15px; /* Adjust padding */
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px; /* Rounded corners for buttons */
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: #ff5039; /* Darker color on hover */
+        }
+
+        /* Increase size for clickable icons */
+        .fab {
+            font-size: 1.5em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2em; /* Smaller heading size on mobile */
+            }
+
+            .package-grid {
+                flex-direction: column; /* Stack cards on mobile */
+                align-items: center; /* Center align cards */
+            }
+
+            .package-card {
+                max-width: 90%; /* Full width on mobile */
+            }
+
+            button {
+                width: 100%; /* Full width buttons on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="transparent" id="navbar" role="navigation">
+            <img src="CaviteTigerLogo.jpg" alt="Cavite Tigers Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="TopDestinations.html">Destinations</a></li>
+                <li><a href="Travel Packages.html">Packages</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <!-- Social Media Links -->
+                <li><a href="https://www.facebook.com/TigertoursinCavite" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/cavitetigers2021" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.tiktok.com/@cavitetigers2021?_t=8q98ZuMtEh8&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="packages" class="section-padding section-background" style="background-image: url('Package.jpg');">
+        <h2>Travel Packages</h2>
+        <div class="package-grid">
+            <div class="package-card">
+                <img src="Tokyo.jpg" alt="Scenic view of Tokyo">
+                <h3>Tokyo</h3>
+                <p>Experience the vibrant city of Tokyo with its mix of modern wonders and rich traditions.</p>
+                <button onclick="viewDetails('Tokyo')">View Details</button>
+            </div>
+            <div class="package-card">
+                <img src="Paris.jpg" alt="Scenic view of Paris">
+                <h3>Paris</h3>
+                <p>Explore the romantic streets of Paris, home to the Eiffel Tower and rich culture.</p>
+                <button onclick="viewDetails('Paris')">View Details</button>
+            </div>
+            <div class="package-card">
+                <img src="Barcelona.jpg" alt="Scenic view of Barcelona">
+                <h3>Barcelona</h3>
+                <p>Discover the lively city of Barcelona, filled with beautiful architecture and beaches.</p>
+                <button onclick="viewDetails('Barcelona')">View Details</button>
+            </div>
+            <div class="package-card">
+                <img src="Dubai.jpg" alt="Scenic view of Dubai">
+                <h3>Dubai</h3>
+                <p>Visit Dubai, a city of luxury, towering skyscrapers, and unforgettable experiences.</p>
+                <button onclick="viewDetails('Dubai')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cavite Tigers Travel and Tours. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

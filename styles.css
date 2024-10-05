@@ -1,0 +1,429 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+nav.transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+nav.opaque {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav img.logo {
+    height: 80px; /* Adjusted height for better visual balance */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* Social Media Icons */
+nav ul li a i {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        padding: 15px 10px;
+        font-size: 1.1em;
+        text-align: center;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #0056b3;
+}
+
+/* Section Styles */
+.section-padding {
+    padding: 60px 20px;
+}
+
+.section-background {
+    position: relative;
+    color: white;
+}
+
+/* Destination and Package Cards */
+.destination-grid,
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.destination-card,
+.package-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: black;
+}
+
+.destination-card:hover,
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+.destination-card img,
+.package-card img {
+    width: 100%;
+    height: auto;
+}
+
+.destination-card h3,
+.package-card h3 {
+    margin: 10px 0;
+}
+
+/* About Section Styles */
+#about {
+    position: relative; /* Position relative for the overlay */
+    overflow: hidden; /* Prevent overflow */
+    color: white; /* Ensure text color is white for contrast */
+}
+
+#about::before {
+    content: ""; /* Empty content for the overlay */
+    position: absolute; /* Position absolute to cover the entire section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Lighten overlay to 0.5 */
+    z-index: 1; /* Place overlay above background but below text */
+}
+
+.about-content {
+    position: relative; /* Position relative for the text content */
+    z-index: 2; /* Ensure text is above the overlay */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Make the About Us title white and bold */
+.about-content h2 {
+    color: white; /* Set the title color to white */
+    font-weight: bold; /* Make the title bold */
+    font-size: 2.5em; /* Increase font size if needed */
+}
+
+.affiliations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px; /* Space above the affiliations */
+}
+
+.accreditation {
+    margin: 10px;
+    text-align: center;
+}
+
+.dot-logo,
+.philgeps-logo,
+.sec-logo,
+.bir-logo {
+    width: 100px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.dot-name,
+.philgeps-name,
+.sec-name,
+.bir-name {
+    font-size: 0.8em; /* Adjust font size for names */
+    display: block; /* Stack names below logos */
+    margin-top: 5px; /* Space between logo and name */
+}
+
+/* Contact Us Section Styles */
+#contact {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: 10px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    /* General Body Adjustments */
+    body {
+        font-size: 16px; /* Base font size for mobile */
+        line-height: 1.4; /* Adjust line height for better readability */
+    }
+
+    /* Navbar */
+    nav {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+        background-color: white; /* White background for mobile */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        width: 100%; /* Full width for each link */
+        margin-left: 0; /* No left margin */
+    }
+
+    nav ul li a {
+        width: 100%; /* Full width links */
+        padding: 15px 10px; /* Adjust padding */
+        font-size: 1.1em; /* Slightly smaller font size */
+        text-align: center; /* Center text */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: auto; /* Allow the section to adjust based on content */
+        padding: 40px 20px; /* Adjust padding */
+    }
+
+    .hero-content h1 {
+        font-size: 2em; /* Smaller title size */
+    }
+
+    .hero-content p {
+        font-size: 1.2em; /* Smaller paragraph size */
+    }
+
+    .hero-content button {
+        padding: 10px 15px; /* Adjust button padding */
+        font-size: 1.1em; /* Smaller button text */
+    }
+
+    /* Destination and Package Cards */
+    .destination-grid,
+    .package-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    /* About Section */
+    #about {
+        padding: 40px 20px; /* Adjust padding */
+    }
+
+    .about-content {
+        padding: 20px; /* Add padding */
+    }
+
+    .affiliations {
+        flex-direction: column; /* Stack logos vertically */
+    }
+
+    .accreditation {
+        margin-bottom: 20px; /* Space between logos */
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 30px 20px; /* Adjust padding */
+    }
+
+    .contact-info {
+        text-align: center; /* Center text */
+    }
+
+    .contact-form {
+        width: 100%; /* Full width form */
+        padding: 20px; /* Add padding */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1em; /* Adjust font size */
+        padding: 10px; /* Add padding */
+    }
+
+    .contact-form button {
+        font-size: 1em; /* Adjust button font size */
+        padding: 10px; /* Adjust button padding */
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px; /* Adjust footer padding */
+        font-size: 0.9em; /* Smaller footer font size */
+    }
+}
